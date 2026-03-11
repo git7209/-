@@ -1,0 +1,11 @@
+.model small
+.data
+.code
+main proc
+           
+      mov ax,300
+      mov bx,400
+      sub ax,bx  
+    
+    main endp
+end main
