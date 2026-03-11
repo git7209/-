@@ -1,0 +1,23 @@
+.model small
+.data         
+msg db 'hello! World$'         
+msg1 db ' hyun deok$'
+.code
+main proc
+    
+    mov ax,@data
+    mov ds, ax    ;정의한 데이터 세그먼트 주소와 기존 주소를 동일시 해줌 
+    
+    mov ah,9
+    lea dx,msg  ;msg의 오프셋 번지(주소)를 dx에 저장함.  (lea: 특정변수의 주소를 알아내는 명령)
+    int 21h    ;문자열 출력 
+                
+    mov ah,9
+    lea dx,msg1
+    int 21h            
+                
+    mov ah, 4ch
+    int 21h
+  
+    main endp
+end main
