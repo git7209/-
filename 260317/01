@@ -1,0 +1,15 @@
+.model
+.code
+
+main proc
+                                                                                                  
+      mov ax, 0b800h  ; 세먼트 0800h 에서부터 비디오 메모리로 시작됨. (화면제어 가능)   = video buffer address
+      mov ds, ax   ;   ds 에 08000h 저장
+      mov cl, 'a' ; 출력할 문자  
+      mov ch,11011111b ; 문자의 색(바탕색, 글자색)
+      mov bx, 15eh ; 화면상 위치
+      mov[bx] cx ; bx의 메모리 주소를 사용하며 cx값을 넣음           
+                                                          
+                                                          
+    main endp
+end main
