@@ -1,0 +1,15 @@
+.model
+.code
+
+main proc
+                                                                                                  
+    mov bx, 0100h
+    add bx, 0003h ; 0103h
+    
+    mov dl,bh
+    mov ah, 2     ;ascii code 로 깔짝 
+    int 21h
+    
+                                                          
+    main endp
+end main
