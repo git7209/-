@@ -1,0 +1,30 @@
+.model
+.code
+
+main proc
+                                                                                                  
+  mov ax,500
+  mov cx,5
+  inc ax
+  mov bx, 200
+  div cx
+                             
+    main endp
+end main      
+
+          ; mov cx, 6789h
+    ;mov dx, 0abcdh
+    ;sub cx, dx             
+   ; mov ax,             
+               
+    ;mov ax, 99
+    ;mov bx,99
+    ;mul bx
+    
+                   
+     ;mov al, 34
+     ;mov bl, 11
+     ;div bl                   
+                   
+                   
+
