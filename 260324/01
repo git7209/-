@@ -1,0 +1,14 @@
+.model small
+.data           
+.code                   
+main proc    
+      
+    mov ax,41
+    mov bx,42
+    ;mov cx,ax
+    ;mov ax,bx
+    ;mov bx,cx
+    xchg ax,bx 
+    ;익스체인지(xchg)의 형식과 사용 예를 정리한 코드          
+    main endp
+end main 
