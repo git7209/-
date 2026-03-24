@@ -1,0 +1,21 @@
+.model small ;모델 사이즈
+.data  
+msg db 'Hello! Assembly!$'         
+.code                   
+main proc               ;main proc 시작
+    mov ax,@data
+    mov ds,ax    
+    mov ah,9
+    call print_screen    ;사용자 proc 호출
+    
+    mov ah,4ch
+    int 21h     ;도스창 복귀  
+    
+main endp           ;main proc 종류 
+
+print_screen proc   ;사용자 proc 시작 
+    lea dx,msg
+    int 21h                
+    ret
+print_screen endp      ;사용자 proc 종료     
+end main               ;전체 종료  
